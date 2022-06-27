@@ -1,6 +1,7 @@
 import './singUpForm.styles.scss';
 
 import { useState } from "react";
+
 import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "../../utils/firebase/firebase.utils";
 import FormInput from "../formInput/FormInput.component";
 import Button from '../button/Button.component';
