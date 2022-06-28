@@ -1,10 +1,11 @@
-import './singUpForm.styles.scss';
-
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "../../utils/firebase/firebase.utils";
 import FormInput from "../formInput/FormInput.component";
 import Button from '../button/Button.component';
+import { UserContext } from "../../contexts/User.context";
+
+import './singUpForm.styles.scss';
 
 const defaultFormFields = {
     displayName: '',
@@ -22,6 +23,8 @@ const SingUpForm = () => {
         setFormFields({ ...formFields, [name]: value });
     };
 
+    const { setCurrentUser } = useContext(UserContext)
+
     const resetFormFields = () => {
         setFormFields(defaultFormFields);
     }
@@ -34,6 +37,7 @@ const SingUpForm = () => {
         }
         try {
             const { user } = await createAuthUserWithEmailAndPassword(email, password);
+            setCurrentUser(user);
             await createUserDocumentFromAuth(user, { displayName })
             resetFormFields();
         } catch (err) {

@@ -1,10 +1,11 @@
-import './singInForm.styles.scss';
-
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 import { signInAuthUserWithEmailAndPassword, createUserDocumentFromAuth, signInWithGooglePopup } from "../../utils/firebase/firebase.utils";
 import FormInput from "../formInput/FormInput.component";
 import Button from '../button/Button.component';
+import { UserContext } from "../../contexts/User.context";
+
+import './singInForm.styles.scss';
 
 const defaultFormFields = {
     email: '',
@@ -20,6 +21,8 @@ const SingInForm = () => {
         setFormFields({ ...formFields, [name]: value });
     };
 
+    const { setCurrentUser } = useContext(UserContext)
+
     const resetFormFields = () => {
         setFormFields(defaultFormFields);
     }
@@ -32,8 +35,8 @@ const SingInForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await signInAuthUserWithEmailAndPassword(email, password);
-            console.log(res);
+            const { user } = await signInAuthUserWithEmailAndPassword(email, password);
+            setCurrentUser(user);
             resetFormFields();
         } catch (err) {
             switch (err.code) {
