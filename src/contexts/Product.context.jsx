@@ -2,7 +2,7 @@ import { createContext, useState, useEffect } from "react";
 
 // import { onAuthStateChangedListener, createUserDocumentFromAuth } from "../utils/firebase/firebase.utils";
 
-import PRODUCTS from '../shop-data.json'
+import PRODUCTS from '../shop-data.json';
 
 //as the actual value you want to access
 export const ProductsContext = createContext({
