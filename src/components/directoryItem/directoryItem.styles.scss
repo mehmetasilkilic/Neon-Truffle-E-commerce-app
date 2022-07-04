@@ -1,4 +1,4 @@
-.category-container {
+.directory-item-container {
     position: relative;
     min-width: 30%;
     height: 240px;
@@ -18,7 +18,7 @@
             transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
         }
 
-        & .category-body-container {
+        & .body {
             opacity: 0.9;
             transition: 0.4s;
         }
@@ -43,7 +43,7 @@
         background-position: center;
     }
 
-    .category-body-container {
+    .body {
         position: absolute;
         right: 0;
         height: 90px;
