@@ -1,15 +1,15 @@
 import SingInForm from "../../components/signInForm/SingInForm.component";
 import SingUpForm from "../../components/signUpForm/SingUpForm.component";
 
-import './authentication.styles.scss';
+import "./authentication.styles.scss";
 
 const Authentication = () => {
-    return (
-        <div className="authentication-container">
-            <SingInForm />
-            <SingUpForm />
-        </div>
-    )
-}
+  return (
+    <div className="authentication-container">
+      <SingInForm />
+      <SingUpForm />
+    </div>
+  );
+};
 
-export default Authentication
+export default Authentication;
