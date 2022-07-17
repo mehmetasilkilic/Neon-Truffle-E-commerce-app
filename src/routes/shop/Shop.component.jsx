@@ -22,5 +22,5 @@ const Shop = () => {
     </Routes>
   );
 };
-//
+
 export default Shop;
