@@ -1,17 +1,17 @@
 .payment-from-container {
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    .form-container {
-        height: 100px;
-        min-width: 500px;
+  .form-container {
+    height: 100px;
+    min-width: 500px;
 
-        Button {
-            margin-left: auto;
-            margin-top: 30px;
-        }
+    Button {
+      margin-left: auto;
+      margin-top: 30px;
     }
+  }
 }
