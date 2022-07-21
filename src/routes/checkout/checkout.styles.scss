@@ -1,5 +1,5 @@
 .checkout-container {
-  width: 55%;
+  width: 65%;
   min-height: 90vh;
   display: flex;
   flex-direction: column;
@@ -13,7 +13,7 @@
     border-bottom: 1px solid darkgrey;
     .header-block {
       text-transform: capitalize;
-      width: 23%;
+      width: 19%;
       &:last-child {
         width: 8%;
       }
