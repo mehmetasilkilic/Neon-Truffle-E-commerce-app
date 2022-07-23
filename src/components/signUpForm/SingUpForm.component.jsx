@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 
 import FormInput from "../formInput/FormInput.component";
 import Button from "../button/Button.component";
-import { signUpStart } from "../../store/user/user.action.js";
+import { signUpStart } from "../../store/user/user.action";
 
 import "./singUpForm.styles.scss";
 
