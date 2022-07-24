@@ -12,7 +12,7 @@ const Button: FC<ButtonProps> = ({
   isLoading,
   buttonType,
   ...otherProps
-}): JSX.Element => {
+}) => {
   return (
     <button
       disabled={isLoading}
