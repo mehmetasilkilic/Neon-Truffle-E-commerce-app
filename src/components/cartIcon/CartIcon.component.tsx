@@ -25,8 +25,11 @@ const CartIcon = () => {
   };
 
   return (
-    <div className="cart-icon-container" onMouseEnter={toggleIsCartOpen}
-    onClick={goToCheckOutHandler}>
+    <div
+      className="cart-icon-container"
+      onMouseEnter={toggleIsCartOpen}
+      onClick={goToCheckOutHandler}
+    >
       <ShoppingIcon className="shopping-icon" />
       <span className="item-count">{cartCount}</span>
     </div>
